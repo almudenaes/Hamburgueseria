@@ -20,6 +20,11 @@ a {
 	text-decoration: none;
 }
 
+img { /*siempre que haya web responsive habria que hacer esto, la imagen se adapte*/
+	width: 100%;
+	height: auto;
+}
+
 .row {
 	max-width: 1100px;
 	margin:0 auto;
@@ -61,24 +66,104 @@ header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
 }
 
 /*fin de cabecera*/
+/*navegador*/
 
+header nav{
+	background-color: white;
+	padding: 20px 0px; /*20 arriba/abajo y 0 izquierda derecha y si hay 4 numeros es en el sentido
+	de las agujas del reloj*/
+}
+
+header nav .logo{
+	width: 100px;
+	height: auto;
+	float:left;
+}
+
+header nav .menu{
+	float:right;
+	padding-top: 5px;
+}
+
+header nav .menu li{ /* tambien se podria hacer header nav ul li*/
+	display: inline-block;
+	margin-right: 15px;
+
+}
+
+header nav .menu li a {
+	color:#666;
+
+}
+
+header nav .menu li a:hover {
+	color:#fa573a ;
+}
+
+header nav .menu li .activo {
+	color:#fa573a ; /*miga de pan color*/
+}
+
+header .hamburguesa{
+	display:none;
+}
+
+
+
+
+/* Media Query*/
 @media (max-width: 800px) {
-	header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
-	text-align: justify;
-	}
+	
 	header .submenu .row div{
 		font-size: 10px; /*tamaño letra*/	
-		padding-left: 60px
+		text-align: center;
 	}
-}
+	header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
+	text-align: center;}
+	}
 @media (max-width: 600px) {
 	.ocultar { 
 			display: none; }/*tambien podria ser header .submenu .row div span span, header .submenu
 		.row div a span {} --> la primera linea es la del numero de telefono que está 
 		dentro de dos span, el resto el resto.Se llama herencia, en vez de crear clase .ocultar. */
 	header i {
-		font-size: 25px;
-		margin-right: 70px;}	
+		font-size: 200%;
+		margin-right: 0;}
+
+	header nav {
+		padding: 20px 10px; 
+	}	
+
+	header .hamburguesa{
+		display: block;
+		float:right;
+		cursor:pointer;/*para hacerla clicable*/
+
+	}	
+	header .hamburguesa .linea{ /*las tres rayas del menu*/
+		border-top: 2px solid #aaa;
+		width: 30px;	
+		margin-bottom: 10px;
+		
+	}
+
+	header nav .menu {
+		float:none;
+		padding-top: 60px;
+
+	}
+
+	header nav .menu li {
+		display: block;
+		text-align: center;
+		padding: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	header nav .menu li:last-child {
+		border-bottom: 0px;
+	}
+
 }
 
 
