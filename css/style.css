@@ -36,7 +36,7 @@ img { /*siempre que haya web responsive habria que hacer esto, la imagen se adap
 	height: 0;
 	clear: both;
 }
-
+/*COMIENZA HEADER*/
 /*cabecera*/
 header .submenu {
 	background-color:#21242e;
@@ -108,6 +108,60 @@ header .hamburguesa{
 	display:none;
 }
 
+/*fin de HEADER*/
+/*HERO*/
+
+.hero {
+	background-image: url("../images/fondo.jpg");
+	background-size: cover; /*se adapta a la pantalla*/
+	background-position:center center; /*Para cuando la pantalla se achique o cambie a ipad: primer valor vertical, 2º horizontal*/
+	background-color: #222; /*fondo de color para que se funda con lo siguiente*/
+	background-blend-mode: soft-light; /*esto es lo *siguiente* para oscurecer la foto*/
+	height: 550px; /* 100vp ocupa toda la pantalla pero cogiendo tambien las medidas del header*/
+}
+.hero>div {/*significa que actua sobre el div siguiente del hero*/
+	padding: 15% 10%; /*altura-lado*/
+	color:white;
+}
+
+.hero div h1{
+	font-family: Handlee, cursive;
+	font-size: 2em;
+}
+
+.hero div h2 {
+	color: #fa573a;
+	font-size: 1.25em;
+	margin: .8em 0%;
+}
+
+.hero .boton{
+	background-color: #fa573a;
+	padding: .9em;
+	display: inline-block;
+	margin: .8em 0%;
+	border: 2px solid #fa573a; /*se pone borde porque cuando se hace el hover solo habra borde*/
+}
+
+.hero .boton:hover {
+	background-color: transparent;
+	color: #fa573a; 
+}
+
+.hero ul{
+	display: flex;
+}
+
+.hero .social li{ /*tambien puede ser .hero ul li {}*/
+	margin-right: 20px;
+	font-size: 1.5em;
+}
+}
+
+
+
+
+
 
 
 
@@ -115,12 +169,14 @@ header .hamburguesa{
 @media (max-width: 800px) {
 	
 	header .submenu .row div{
-		font-size: 10px; /*tamaño letra*/	
+		font-size: 5px; /*tamaño letra*/	
 		text-align: center;
 	}
 	header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
 	text-align: center;}
 	}
+
+
 @media (max-width: 600px) {
 	.ocultar { 
 			display: none; }/*tambien podria ser header .submenu .row div span span, header .submenu
@@ -162,6 +218,10 @@ header .hamburguesa{
 
 	header nav .menu li:last-child {
 		border-bottom: 0px;
+	}
+
+	.hero {
+		height: 400px;
 	}
 
 }
