@@ -135,15 +135,16 @@ header .hamburguesa{
 	margin: .8em 0%;
 }
 
-.hero .boton{
+.boton{
 	background-color: #fa573a;
 	padding: .9em;
 	display: inline-block;
 	margin: .8em 0%;
-	border: 2px solid #fa573a; /*se pone borde porque cuando se hace el hover solo habra borde*/
+	border: 2px solid #fa573a; 
+	/*se pone borde porque cuando se hace el hover solo habra borde*/
 }
 
-.hero .boton:hover {
+.boton:hover {
 	background-color: transparent;
 	color: #fa573a; 
 }
@@ -198,6 +199,7 @@ main section .underline span{
 main section .flex {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top:50px;
 }
 
 main section .flex article {
@@ -216,7 +218,7 @@ main #ourservice article .icon  {
 main #ourservice article h3 {
 	margin: 15px 0px;
 	font-weight: bold;
-	font-size: 120%
+	font-size: 120%;
 
 }
 
@@ -227,7 +229,7 @@ main #ourservice article p{
 .fa-truck-moving {
 	transform: rotateY(180deg); /*para girar la imagen, camion mira a la izquierda en vez de derecha*/
 }
-
+/*la Z gira como las agujas del reloj y la Y gira parte de delante y detras (arriba abajo)*/
 main .enlace {
 	color:#fa573a;
 	font-weight: bold;
@@ -247,8 +249,41 @@ main .enlace i{
 	margin-left: 0px;
 	transition: 2s;}
 
+main #aboutus .columna {
+	width: 50%;
+	padding: 15px;
+}	
 
+main #aboutus .imagen .marco {
+	border: 3px solid #fa573a;
+	transform: rotateZ(10deg);
+	transition: 2s;
+}
 
+main #aboutus .imagen .marco img{
+	transform: rotateZ(-10deg);
+	transition: 2s;
+	display: block;
+}
+
+main #aboutus .imagen:hover .marco{
+	transform: rotateZ(0deg);
+
+}
+
+main #aboutus .imagen:hover img{
+	transform: rotateZ(0deg);
+}
+
+main #aboutus h3{
+	font-size: 110%;
+	font-weight: bold;
+}
+
+main #aboutus h4{
+	color: #fa573a;
+	margin: 10px 0px;
+}
 
 
 
@@ -280,7 +315,8 @@ main .enlace i{
 		dentro de dos span, el resto el resto.Se llama herencia, en vez de crear clase .ocultar. */
 	header i {
 		font-size: 200%;
-		margin-right: 0;}
+		margin-right: 0;
+	}
 
 	header nav {
 		padding: 20px 10px; 
@@ -292,6 +328,7 @@ main .enlace i{
 		cursor:pointer;/*para hacerla clicable*/
 
 	}	
+
 	header .hamburguesa .linea{ /*las tres rayas del menu*/
 		border-top: 2px solid #aaa;
 		width: 30px;	
@@ -328,6 +365,15 @@ main .enlace i{
 		padding-bottom: 20px;
 	}
 
+	main #aboutus .columna {
+	width: 100%;
+	padding: 15px;
+	}
+	/*la transicion no la quitamos porque en el movil no funciona*/
+
+	main #aboutus .flex {
+	flex-direction: column-reverse; /*para poner el texto arriba de la imagen*/
+	}		
 }
 
 @media (max-width: 1100px) {
