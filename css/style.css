@@ -1,0 +1,336 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap');
+
+
+*{
+	box-sizing: border-box; /*modifica modelo de caja*/
+}
+
+.container-fluid {
+	width: 100%;
+
+}
+
+body {
+	font-family: Montserrat, Arial, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img { /*siempre que haya web responsive habria que hacer esto, la imagen se adapte*/
+	width: 100%;
+	height: auto;
+}
+
+.row {
+	max-width: 1100px;
+	margin:0 auto;
+}
+
+.row:after { /*para que vuelva el fondo una vez se alinee*/
+	content:"";
+	display: block;
+	height: 0;
+	clear: both;
+}
+/*COMIENZA HEADER*/
+/*cabecera*/
+header .submenu {
+	background-color:#21242e;
+	color: white;
+	padding: 20px 0px;
+}
+
+header .submenu i{
+	color: #fa573a;
+	padding-right: 10px; /*tambien se puede poner un margin*/
+	/*es para separar el icono de las palabras*/
+}
+
+header .submenu a:hover {
+	color: #fa573a;
+
+}
+
+header .submenu .row div {
+	float:left;
+	width: 25%;
+
+}
+
+header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
+	text-align: right;
+}
+
+/*fin de cabecera*/
+/*navegador*/
+
+header nav{
+	background-color: white;
+	padding: 20px 0px; /*20 arriba/abajo y 0 izquierda derecha y si hay 4 numeros es en el sentido
+	de las agujas del reloj*/
+}
+
+header nav .logo{
+	width: 100px;
+	height: auto;
+	float:left;
+}
+
+header nav .menu{
+	float:right;
+	padding-top: 5px;
+}
+
+header nav .menu li{ /* tambien se podria hacer header nav ul li*/
+	display: inline-block;
+	margin-right: 15px;
+
+}
+
+header nav .menu li a {
+	color:#666;
+
+}
+
+header nav .menu li a:hover {
+	color:#fa573a ;
+}
+
+header nav .menu li .activo {
+	color:#fa573a ; /*miga de pan color*/
+}
+
+header .hamburguesa{
+	display:none;
+}
+
+/*fin de HEADER*/
+/*HERO*/
+
+.hero {
+	background-image: url("../images/fondo.jpg");
+	background-size: cover; /*se adapta a la pantalla*/
+	background-position:center center; /*Para cuando la pantalla se achique o cambie a ipad: primer valor vertical, 2º horizontal*/
+	background-color: #222; /*fondo de color para que se funda con lo siguiente*/
+	background-blend-mode: soft-light; /*esto es lo *siguiente* para oscurecer la foto*/
+	height: 550px; /* 100vp ocupa toda la pantalla pero cogiendo tambien las medidas del header*/
+}
+.hero>div {/*significa que actua sobre el div siguiente del hero*/
+	padding: 15% 10%; /*altura-lado*/
+	color:white;
+}
+
+.hero div h1{
+	font-family: Handlee, cursive;
+	font-size: 2em;
+}
+
+.hero div h2 {
+	color: #fa573a;
+	font-size: 1.25em;
+	margin: .8em 0%;
+}
+
+.hero .boton{
+	background-color: #fa573a;
+	padding: .9em;
+	display: inline-block;
+	margin: .8em 0%;
+	border: 2px solid #fa573a; /*se pone borde porque cuando se hace el hover solo habra borde*/
+}
+
+.hero .boton:hover {
+	background-color: transparent;
+	color: #fa573a; 
+}
+
+.hero ul{
+	display: flex;
+}
+
+.hero .social li{ /*tambien puede ser .hero ul li {}*/
+	margin-right: 20px;
+	font-size: 1.5em;
+}
+
+ /*Fin HERO*/
+ /*Empieza MAIN*/
+
+section {
+	padding: 50px 0px;
+}
+
+main section h2 {
+	color:black;
+	font-family: Handlee, cursiva;
+	text-align: center;
+	font-size: 2em;
+}
+
+main section h2 span {
+	color:#fa573a;
+}
+
+main section .underline {
+	position: relative; 
+	width: 9.37em;
+	margin: 0 auto;
+	color:#fa573a;
+
+}
+
+main section .underline hr {
+	border-color: #fa573a;
+}
+
+main section .underline span{
+	display: block;
+	font-weight: bold;
+	position:absolute;
+	top: -7px;
+	left: 68px;
+}
+
+main section .flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main section .flex article {
+	width: 33%;
+	border-left: 1px solid #ccc; /*barra de la izquierda*/
+	padding: 0px 25px;
+}
+
+main #ourservice article .icon  {
+	color:#fa573a;
+	border:2px solid #fa573a;
+	padding: 10px;
+	font-size: 120%;
+}
+
+main #ourservice article h3 {
+	margin: 15px 0px;
+	font-weight: bold;
+	font-size: 120%
+
+}
+
+main #ourservice article p{
+	color: #aaa;
+}
+
+.fa-truck-moving {
+	transform: rotateY(180deg); /*para girar la imagen, camion mira a la izquierda en vez de derecha*/
+}
+
+main .enlace {
+	color:#fa573a;
+	font-weight: bold;
+	margin:20px 0px 0px 0px;
+	display: inline-block;
+	margin-left: 0px;
+	transition: .5s;
+}
+
+
+main .enlace:hover i{
+	margin-left: 5px; /*distancia que se mueve */
+	transition: .5s; /*tiempo transicion*/
+}
+
+main .enlace i{
+	margin-left: 0px;
+	transition: 2s;}
+
+
+
+
+
+
+/* Media Query*/
+@media (max-width: 768px) {
+	
+	header .submenu .row div{
+		font-size: 5px; /*tamaño letra*/	
+		text-align: center;
+	}
+	header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
+		text-align: center;
+	}
+	main section .flex article {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+
+	main section .flex article:first-child, main section .flex article:last-child  {
+		border-left: 0px;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.ocultar { 
+			display: none; }/*tambien podria ser header .submenu .row div span span, header .submenu
+		.row div a span {} --> la primera linea es la del numero de telefono que está 
+		dentro de dos span, el resto el resto.Se llama herencia, en vez de crear clase .ocultar. */
+	header i {
+		font-size: 200%;
+		margin-right: 0;}
+
+	header nav {
+		padding: 20px 10px; 
+	}	
+
+	header .hamburguesa{
+		display: block;
+		float:right;
+		cursor:pointer;/*para hacerla clicable*/
+
+	}	
+	header .hamburguesa .linea{ /*las tres rayas del menu*/
+		border-top: 2px solid #aaa;
+		width: 30px;	
+		margin-bottom: 10px;
+		
+	}
+
+	header nav .menu {
+		float:none;
+		padding-top: 60px;
+
+	}
+
+	header nav .menu li {
+		display: block;
+		text-align: center;
+		padding: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	header nav .menu li:last-child {
+		border-bottom: 0px;
+	}
+
+	.hero {
+		height: 400px;
+	}
+
+	main section .flex article {
+		width: 100%;
+		border-left: 0px;
+		border-bottom: .5px solid #ccc;
+		padding-bottom: 20px;
+	}
+
+}
+
+
+
+
+
+
