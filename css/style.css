@@ -156,9 +156,96 @@ header .hamburguesa{
 	margin-right: 20px;
 	font-size: 1.5em;
 }
+
+ /*Fin HERO*/
+ /*Empieza MAIN*/
+
+section {
+	padding: 50px 0px;
+}
+
+main section h2 {
+	color:black;
+	font-family: Handlee, cursiva;
+	text-align: center;
+	font-size: 2em;
+}
+
+main section h2 span {
+	color:#fa573a;
+}
+
+main section .underline {
+	position: relative; 
+	width: 9.37em;
+	margin: 0 auto;
+	color:#fa573a;
+
+}
+
+main section .underline hr {
+	border-color: #fa573a;
+}
+
+main section .underline span{
+	display: block;
+	font-weight: bold;
+	position:absolute;
+	top: -7px;
+	left: 68px;
+}
+
+main section .flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main section .flex article {
+	width: 33%;
+	border-left: 1px solid #ccc; /*barra de la izquierda*/
+	padding: 0px 25px;
+}
+
+main #ourservice article .icon  {
+	color:#fa573a;
+	border:2px solid #fa573a;
+	padding: 10px;
+	font-size: 120%;
+}
+
+main #ourservice article h3 {
+	margin: 15px 0px;
+	font-weight: bold;
+	font-size: 120%
+
+}
+
+main #ourservice article p{
+	color: #aaa;
+}
+
+.fa-truck-moving {
+	transform: rotateY(180deg); /*para girar la imagen, camion mira a la izquierda en vez de derecha*/
+}
+
+main .enlace {
+	color:#fa573a;
+	font-weight: bold;
+	margin:20px 0px 0px 0px;
+	display: inline-block;
+	margin-left: 0px;
+	transition: .5s;
 }
 
 
+main .enlace:hover i{
+	margin-left: 5px; /*distancia que se mueve */
+	transition: .5s; /*tiempo transicion*/
+}
+
+main .enlace i{
+	margin-left: 0px;
+	transition: 2s;}
 
 
 
@@ -166,16 +253,25 @@ header .hamburguesa{
 
 
 /* Media Query*/
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 	
 	header .submenu .row div{
 		font-size: 5px; /*tamaño letra*/	
 		text-align: center;
 	}
 	header .submenu .row div:nth-child(3), header .submenu .row div:last-child {
-	text-align: center;}
+		text-align: center;
+	}
+	main section .flex article {
+		width: 50%;
+		margin-bottom: 20px;
 	}
 
+	main section .flex article:first-child, main section .flex article:last-child  {
+		border-left: 0px;
+	}
+
+}
 
 @media (max-width: 600px) {
 	.ocultar { 
@@ -222,6 +318,13 @@ header .hamburguesa{
 
 	.hero {
 		height: 400px;
+	}
+
+	main section .flex article {
+		width: 100%;
+		border-left: 0px;
+		border-bottom: .5px solid #ccc;
+		padding-bottom: 20px;
 	}
 
 }
