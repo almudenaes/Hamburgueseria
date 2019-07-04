@@ -120,7 +120,7 @@ header .hamburguesa{
 	height: 550px; /* 100vp ocupa toda la pantalla pero cogiendo tambien las medidas del header*/
 }
 .hero>div {/*significa que actua sobre el div siguiente del hero*/
-	padding: 15% 10%; /*altura-lado*/
+	padding: 15% 0%; /*altura-lado*/
 	color:white;
 }
 
@@ -308,6 +308,7 @@ main .enlace i{
 	header nav .menu li {
 		display: block;
 		text-align: center;
+		margin-right: 0px;
 		padding: 20px;
 		border-bottom: 1px solid #ccc;
 	}
@@ -329,6 +330,11 @@ main .enlace i{
 
 }
 
+@media (max-width: 1100px) {
+	.hero>div {
+	padding: 15% 10%; 
+	}
+}
 
 
 
